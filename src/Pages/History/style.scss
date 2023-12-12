@@ -1,0 +1,62 @@
+.History-page {
+  padding: 40px 0;
+  width: 100%;
+  height: 100%;
+  min-height: 730px;
+  background-color: #1c0057;
+  .wrap {
+    .History-box {
+      min-height: 730px;
+      width: 100%;
+      border-radius: 18px;
+      background-color: #fff;
+      @include media("<=tablet") {
+        padding: 20px 30px;
+        min-width: 0;
+      }
+      .History-header {
+        padding: 30px 60px;
+        display: flex;
+        @include media("<=tablet") {
+          padding: 10px 2px;
+        }
+        .heading {
+          color: #1c0057;
+          font-size: 30px;
+          font-style: normal;
+          font-weight: 800;
+          @include media("<=tablet") {
+            font-size: 20px;
+          }
+        }
+      }
+      .table {
+        .t-head {
+          background: linear-gradient(90deg, #2e097b 16.28%, #e069e4 139.66%);
+          .fs {
+            color: #fff;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 900;
+            padding: 20px 30px;
+            @include media("<=tablet") {
+              padding: 14px 22px;
+              font-size: 12px;
+            }
+          }
+        }
+        .fd {
+          color: #161616;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 500;
+          padding: 20px 30px;
+          @include media("<=tablet") {
+            padding: 14px 20px;
+            font-size: 10px;
+          }
+        }
+      }
+    }
+  }
+}

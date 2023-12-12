@@ -1,0 +1,60 @@
+// Header
+.header-camp {
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  min-height: 70px;
+  padding: 8px 0px;
+  background: #1c0057;
+  display: none;
+  @include media("<=tablet") {
+    display: flex;
+  }
+  .wrap {
+    .left {
+      flex: 0.2;
+      .logo-img {
+        .logo {
+          height: 80px;
+        }
+      }
+    }
+    .right {
+      flex: 1;
+      .menu-list {
+        .menu-item {
+          font-size: 22px;
+          font-weight: 600;
+          line-height: 22px;
+          color: #ae2744;
+          text-transform: uppercase;
+          font-family: "Montserrat", sans-serif;
+          margin-right: 30px;
+          cursor: pointer;
+          @include anim;
+          &:hover {
+            color: #ed6270;
+          }
+        }
+      }
+      .logout-action {
+        margin-left: 20px;
+        .btn {
+          background: #133250;
+          border: 1px #133250 solid;
+          color: #fff;
+          display: table;
+          text-align: center;
+          cursor: pointer;
+          text-align: center;
+          padding: 8px 20px;
+          font-size: 18px;
+          font-weight: 500;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

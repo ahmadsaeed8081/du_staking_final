@@ -1,0 +1,72 @@
+// Side Bar
+.sidebar-s {
+  width: 260px;
+  height: 100%;
+  overflow-y: auto;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  @include media("<=tablet") {
+    display: none;
+  }
+  .side-block {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    .side-hdr {
+      padding: 20px 0;
+    }
+    .items {
+      padding: 20px 16px;
+      .item {
+        width: 100%;
+        justify-content: center;
+        padding: 6px 0;
+        border-radius: 4px;
+        .li {
+          width: 100%;
+          cursor: pointer;
+          color: rgba(255, 255, 255, 0.7);
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 35px;
+          text-align: start;
+          @include anim;
+          @include media("<=desktop") {
+            font-size: 14px;
+          }
+        }
+        &.active {
+          background: transparent;
+          .li {
+            font-weight: 500;
+            color: #fff;
+          }
+        }
+      }
+    }
+    .side-footer {
+    }
+  }
+}
+
+.btn-logout {
+  display: flex;
+  align-items: center;
+  border-radius: 30px;
+  gap: 12px;
+  .btn-icon {
+    svg {
+      height: 18px;
+      width: 18px;
+    }
+  }
+  .btn-lbl {
+    color: #1c0057;
+    font-size: 16px;
+    font-style: normal;
+    line-height: normal;
+  }
+}

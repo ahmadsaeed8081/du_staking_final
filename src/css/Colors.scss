@@ -1,0 +1,29 @@
+$themeColor: linear-gradient(92deg, #c213c8 -2.38%, #e069e4 89.93%);
+$pinkDark: #ae2744;
+$themeColorHover: #fff;
+$pageBackground: #ffffff;
+$lightButtonColor: #ffffff;
+$lightButtonBorderColor: #a0a0a0;
+$lightButtonColorHover: #f1f1f1;
+$bgGreen: linear-gradient(90deg, #72aa8f 0%, #b8deb4 64.58%);
+
+$red: #d61810;
+$yellow: #f2b239;
+$green: #10a310;
+$white: #ffffff;
+
+.color {
+  color: $themeColor;
+}
+.white {
+  color: $white;
+}
+.red {
+  color: $red;
+}
+.yellow {
+  color: $yellow;
+}
+.green {
+  color: $green;
+}

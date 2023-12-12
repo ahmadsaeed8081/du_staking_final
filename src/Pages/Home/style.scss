@@ -1,0 +1,127 @@
+.lading-page {
+  padding: 40px 0;
+  width: 100%;
+  height: 100%;
+  min-height: 730px;
+  background-color: #1c0057;
+  .wrap {
+    .dashboard-box {
+      min-height: 730px;
+      width: 100%;
+      border-radius: 18px;
+      background-color: #fff;
+      @include media("<=tablet") {
+        padding: 20px 4px;
+        min-width: 0;
+      }
+      .dashboard-header {
+        padding: 30px 60px;
+        display: flex;
+        @include media("<=tablet") {
+          padding: 10px 2px;
+        }
+        .heading {
+          color: #1c0057;
+          font-size: 30px;
+          font-style: normal;
+          font-weight: 800;
+          @include media("<=tablet") {
+            font-size: 20px;
+          }
+        }
+      }
+      .d-list {
+        padding: 30px 60px;
+        margin-top: 40px;
+
+        @include media("<=tablet") {
+          padding: 10px;
+          margin-top: 20px;
+        }
+        .grid-wrap {
+          max-width: 1400px;
+          @include media("<=1400px") {
+            align-items: center;
+          }
+        }
+        .d-box {
+          min-height: 210px;
+          border-radius: 10px;
+          border: 2px solid #1c0057;
+          padding: 12px;
+          .btn-withdraw {
+            font-size: 14px;
+            color: #1c0057;
+            padding: 6px 10px;
+            border-radius: 6px;
+            display: none;
+            &.show {
+              display: flex;
+            }
+          }
+          .d-img {
+            width: 70px;
+            height: 70px;
+            margin-bottom: 12px;
+            @include media("<=tablet") {
+              width: 60px;
+              height: 60px;
+            }
+          }
+          .d-heading {
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            @include media("<=tablet") {
+              font-size: 18px;
+              line-height: 18px;
+              text-align: center;
+              margin: 6px 0;
+            }
+          }
+          .d-par {
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 800;
+            line-height: 29.24px;
+            @include media("<=tablet") {
+              font-size: 14px;
+              line-height: 18px;
+            }
+          }
+        }
+      }
+      .d-link {
+        display: flex;
+        gap: 20px;
+        width: max-content;
+        padding: 20px;
+        border-radius: 8px;
+        background: linear-gradient(93deg, #1c0057 1.65%, #e069e4 116.23%);
+        @include media("<=tablet") {
+          padding: 16px;
+          width: 100%;
+        }
+        .d-par {
+          color: #fff;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 25px;
+          @include media("<=tablet") {
+            font-size: 14px;
+            line-height: 18px;
+          }
+        }
+        .Icon {
+          cursor: pointer;
+          svg {
+            height: 20px;
+            width: 20px;
+          }
+        }
+      }
+    }
+  }
+
+}

@@ -1,0 +1,200 @@
+.stacking-page {
+  padding: 40px 0;
+  width: 100%;
+  height: 100%;
+  min-height: 730px;
+  background-color: #1c0057;
+  .wrap {
+    .stacking-box {
+      min-height: 730px;
+      width: 100%;
+      border-radius: 18px;
+      background-color: #fff;
+      @include media("<=tablet") {
+        padding: 20px 10px;
+        min-width: 0;
+      }
+      .stacking-header {
+        padding: 30px 60px;
+        display: flex;
+        @include media("<=tablet") {
+          padding: 10px 2px;
+        }
+        .heading {
+          color: #1c0057;
+          font-size: 30px;
+          font-style: normal;
+          font-weight: 800;
+          line-height: 35px;
+          @include media("<=tablet") {
+            font-size: 20px;
+          }
+        }
+      }
+      .st-box {
+        width: 480px;
+        min-height: 550px;
+        border-radius: 12px;
+        border: 2px solid #1c0057;
+        overflow: hidden;
+        @include media("<=tablet") {
+          width: 400px;
+          height: 500px;
+          border-radius: 12px;
+        }
+        .st-tabs {
+          overflow: hidden;
+          .st-btn {
+            background: #f0f0f0;
+            color: #1b1b1b;
+            font-size: 20px;
+            font-weight: 500;
+            padding: 20px;
+            cursor: pointer;
+            @include anim;
+            @include media("<=tablet") {
+              font-size: 18px;
+              font-style: normal;
+              font-weight: 500;
+              padding: 16px;
+              border-radius: 10px 0px 0px 0px;
+            }
+            &.active {
+              color: #fff;
+              background: #1c0057;
+            }
+          }
+        }
+        .desc {
+          margin-top: 70px;
+          @include media("<=tablet") {
+            margin-top: 40px;
+          }
+          .st-desc {
+            color: #1b1b1b;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+            @include media("<=tablet") {
+              font-size: 14px;
+            }
+          }
+        }
+        .form {
+          .lbl {
+            color: #1b1b1b;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 500;
+            @include media("<=tablet") {
+              font-size: 12px;
+            }
+          }
+          .lbl-1 {
+            color: #1b1b1b;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 500;
+            @include media("<=tablet") {
+              font-size: 9px;
+            }
+          }
+          .inp {
+            border-radius: 7px;
+            border: 1px solid #e069e4;
+            color: #4b4b4b;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 500;
+            padding: 14px;
+            @include media("<=tablet") {
+              font-size: 10px;
+              padding: 12px;
+              border-radius: 5px;
+            }
+          }
+          .input-box {
+            border-radius: 7px;
+            border: 1px solid #e069e4;
+            color: #4b4b4b;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 500;
+            padding: 10px 14px;
+            .plp-lbl {
+              color: #1b1b1b;
+              font-size: 12px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 35px;
+            }
+            .max-lbl {
+              padding: 6px;
+              border-radius: 4px;
+              color: #fff;
+              font-size: 12px;
+              border-radius: 2px;
+              background: linear-gradient(
+                162deg,
+                #1c0057 14.01%,
+                #e069e4 87.66%
+              );
+            }
+          }
+          .btn {
+            margin-top: 10px;
+            border-radius: 7px;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 500;
+            padding: 14px;
+            @include media("<=tablet") {
+              font-size: 10px;
+              padding: 12px;
+              border-radius: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.confirmation-popup-body {
+  width: 650px;
+  height: 300px;
+  padding: 48px 60px;
+  background: #ffffff;
+  .title {
+    color: #000000;
+    text-align: center;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 30px;
+  }
+  .desc {
+    color: #000000;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    margin: 20px 0;
+  }
+  .actions {
+    gap: 20px;
+    .btn-c {
+      width: 100%;
+      font-size: 16px;
+      font-weight: 600;
+      // border-radius: 6px;
+      color: #000000;
+      border: 1px solid;
+      border-image: linear-gradient(90deg, #29d9aa 0%, #7003fc 100%);
+      border-image-slice: 1;
+      &:last-child {
+        background: transparent;
+      }
+    }
+  }
+}

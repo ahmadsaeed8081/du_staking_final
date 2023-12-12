@@ -1,0 +1,74 @@
+.Reward-page {
+  padding: 40px 0;
+  width: 100%;
+  height: 100%;
+  min-height: 730px;
+  background-color: #1c0057;
+  .wrap {
+    .Reward-box {
+      min-height: 730px;
+      width: 100%;
+      border-radius: 18px;
+      background-color: #fff;
+      @include media("<=tablet") {
+        padding: 20px 30px;
+        min-width: 0;
+      }
+      .Reward-header {
+        padding: 30px 60px;
+        display: flex;
+        @include media("<=tablet") {
+          padding: 10px 2px;
+        }
+
+        .heading {
+          color: #1c0057;
+          font-size: 30px;
+          font-style: normal;
+          font-weight: 800;
+          @include media("<=tablet") {
+            font-size: 20px;
+          }
+        }
+      }
+      .re-box {
+        border-radius: 5px;
+        background: linear-gradient(108deg, #2e097b 33.13%, #e069e4 142.43%);
+        padding: 30px;
+        @include media("<=tablet") {
+          border-radius: 4px;
+          padding: 16px 14px;
+        }
+        .box-heading {
+          color: #fff;
+          font-size: 25px;
+          font-style: normal;
+          font-weight: 700;
+          @include media("<=tablet") {
+            font-size: 12px;
+          }
+        }
+        .box-head {
+          color: #fff;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          @include media("<=tablet") {
+            font-size: 8px;
+            margin-right: 5px;
+          }
+        }
+        .box-desc {
+          color: #fff;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 500;
+          @include media("<=tablet") {
+            font-size: 6px;
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+}

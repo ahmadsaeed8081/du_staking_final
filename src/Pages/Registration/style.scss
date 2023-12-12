@@ -1,0 +1,81 @@
+.sign-up-page {
+  min-height: 730px;
+  .shade {
+    top: -50px;
+    right: -35px;
+    height: 400px;
+    width: 400px;
+    border-radius: 398px;
+    background: rgba(224, 105, 228, 0.2);
+    filter: blur(70px);
+  }
+  .bg-right {
+    height: 100%;
+    width: 50%;
+    background-image: url("../../../public/images/bg-login.png");
+    background-color: #1c0057;
+    background-repeat: no-repeat;
+    // background-size: cover;
+    background-position: center;
+    @include media("<=tablet") {
+      width: 100%;
+    }
+  }
+  .form-block {
+    z-index: 10;
+    padding: 30px 0;
+    .page-header {
+      .p-logo {
+        height: 120px;
+      }
+      .title {
+        color: #fff;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 35px;
+      }
+    }
+    .row2 {
+      padding: 60px 0;
+      .input-field {
+        .input-lbl {
+          color: #d8d8d8;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+        .input-box {
+          padding: 12px 16px;
+          border-radius: 8px;
+          border: 1.152px solid #e069e4;
+          @include anim;
+          &:focus-within {
+            border-color: #d8d8d8;
+          }
+          .txt {
+            color: #d8d8d8;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+          }
+          .Icon {
+            cursor: pointer;
+            svg {
+              height: 20px;
+              width: 20px;
+            }
+          }
+        }
+      }
+      .btn-register {
+        height: max-content;
+        padding: 12px;
+        @include anim;
+        border-radius: 8px;
+      }
+    }
+  }
+}
