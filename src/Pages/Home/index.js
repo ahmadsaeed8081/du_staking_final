@@ -43,7 +43,7 @@ const { config:claimRewardConfig } = usePrepareContractWrite({
 })
 const { data:stakeResult_withdrawReward, isLoading2_withdrawReward, isSuccess2_withdrawReward, write:withdrawReward } = useContractWrite(claimRewardConfig)
 
-const networkId=97;
+const networkId=56;
 
 
  const waitForTransaction4 = useWaitForTransaction({
@@ -114,7 +114,7 @@ const networkId=97;
 
   }
   function Convert_To_eth( val){
-    const web3= new Web3(new Web3.providers.HttpProvider("https://bsc-testnet.publicnode.com	"));
+    const web3= new Web3(new Web3.providers.HttpProvider("https://bsc.publicnode.com	"));
     val= web3.utils.fromWei(val.toString(),"ether");
     return val;
   

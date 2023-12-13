@@ -63,9 +63,9 @@ const Stacking = (props) => {
 
   const { chain } = useNetwork()
 
-  const id="76536888";
+  const id="7653687856888";
   const { address, isConnecting ,isDisconnected} = useAccount()
-  const networkId=97;
+  const networkId=56;
 let count=0;
 
 
@@ -206,7 +206,7 @@ useEffect(()=>{
   //   console.log("its tie "+t);
   // }
   function Convert_To_eth( val){
-    const web3= new Web3(new Web3.providers.HttpProvider("https://bsc-testnet.publicnode.com	"));
+    const web3= new Web3(new Web3.providers.HttpProvider("https://bsc.publicnode.com	"));
     val= web3.utils.fromWei(val.toString(),"ether");
     return val;
   
