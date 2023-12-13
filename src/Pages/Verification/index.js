@@ -69,10 +69,16 @@ if(img){
     {
       set_status(0)
     }
-    else if(res0.data[0].Image!="null" && res0.data[0].verified== "underApproval" )
+    else if(res0.data[0].Image=="null" && res0.data[0].verified== "underApproval" )
     {
       // set_status(1)
       set_status(2)
+
+    }
+    else if(res0.data[0].Image!="null" && res0.data[0].verified== "underApproval")
+    {
+      // set_status(1)
+      set_status(0)
 
     }
     else if(res0.data[0].Image!="null" && res0.data[0].verified== "verified" )
