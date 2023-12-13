@@ -11,7 +11,7 @@ const Verification = (props) => {
 
 
 
-const [preview ,setPreview] = useState()
+const [preview ,setPreview] = useState("")
 
 if(img){
   const reader = new FileReader()
@@ -23,7 +23,11 @@ if(img){
 
   async function upload()
   {
-  console.log(preview);
+  if(preview=="")
+  {
+    alert("kindly upload the image")
+    return
+  }
     const res0 =await axios.get("https://duapi-production.up.railway.app/getdatabyaddress?"+ new URLSearchParams({userAddress: props.regAddress,}));
   
     if(res0.data[0]!=undefined)
@@ -61,7 +65,7 @@ if(img){
     const res0 =await axios.get("https://duapi-production.up.railway.app/getdatabyaddress?"+ new URLSearchParams({userAddress: props.regAddress.toLowerCase(),}));
 
     console.log("hello check "+res0.data[0].verified);
-    if(res0.data[0].Image=="null" && res0.data[0].verified=="undefined"  )
+    if(res0.data[0].Image!="null" && res0.data[0].verified=="undefined"  )
     {
       set_status(0)
     }

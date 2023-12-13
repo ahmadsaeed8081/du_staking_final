@@ -240,11 +240,11 @@ useEffect(()=>{
 
   async function stake()
   {
-    // if(props.isVerified!="verified")
-    // {
-    //   alert("Only regitered Members are allowed to stake");
-    //   return;
-    // }
+    if(props.isVerified=="undefined" || props.isVerified=="decline")
+    {
+      alert("Only regitered Members are allowed to stake");
+      return;
+    }
     if(isDisconnected)
     {
       alert("kindly connect your wallet ");
@@ -293,6 +293,11 @@ useEffect(()=>{
     if(props.regAddress.toLowerCase()!=address.toLowerCase())
     {
       alert("kindly change your crypto wallet to the Registered wallet")
+      return;
+    }
+    if(props.isVerified=="undefined" || props.isVerified=="decline")
+    {
+      alert("Only regitered Members are allowed to unstake");
       return;
     }
 

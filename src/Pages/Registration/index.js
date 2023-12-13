@@ -99,26 +99,26 @@ const Registration = () => {
         alert("'Referral Address' doesn't look like an address")
         return
       }
-      // let userData1;
-      // try{
+      let userData1;
+      try{
 
-      //   userData1= await Axios.get("https://duapi-production.up.railway.app/getdatabyaddress?"+ new URLSearchParams({userAddress: ref.toLowerCase(),}))
-      // }
-      // catch(e){}  
-      // if(userData1.data.length>0)
-      // {
-      //   if(userData1.data[0].verified!="verified")
-      //   {
-      //     alert("'Referral Address' is not registered")
-      //     return
-      //   }
+        userData1= await Axios.get("https://duapi-production.up.railway.app/getdatabyaddress?"+ new URLSearchParams({userAddress: ref.toLowerCase(),}))
+      }
+      catch(e){}  
+      if(userData1.data.length>0)
+      {
+        if(userData1.data[0].verified=="decline" || userData1.data[0].verified=="undefined")
+        {
+          alert("'Referral Address' is not registered")
+          return
+        }
 
-      // } 
-      // else
-      // {
-      //   alert("'Referral Address' is not registered")
-      //   return
-      // }  
+      } 
+      else
+      {
+        alert("'Referral Address' is not registered")
+        return
+      }  
       
     }else{
       set_ref("0x0000000000000000000000000000000000000000");
