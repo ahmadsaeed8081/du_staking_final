@@ -31,7 +31,7 @@ if(img){
       if(res0.data[0].verified=="undefined")
       {
         const data={userAddress: res0.data[0].userAddress.toLowerCase(),
-          FName:res0.data[0].FName,LName:res0.data[0].LName,Email:res0.data[0].Email,password:res0.data[0].password,Country:res0.data[0].Country,Phone:res0.data[0].Phone,Ref_address:res0.data[0].Ref_address,verified:"underApproval",Image:preview};
+          FName:res0.data[0].FName,LName:res0.data[0].LName,Email:res0.data[0].Email,password:res0.data[0].password,Country:res0.data[0].Country,Phone:res0.data[0].Phone,Ref_address:res0.data[0].Ref_address,verified:"verified",Image:preview};
 
         const res =await axios.patch("https://duapi-production.up.railway.app/user/"+ res0.data[0]._id,data);
           if(res.data="its done")
@@ -67,7 +67,9 @@ if(img){
     }
     else if(res0.data[0].Image!="null" && res0.data[0].verified== "underApproval" )
     {
-      set_status(1)
+      // set_status(1)
+      set_status(2)
+
     }
     else if(res0.data[0].Image!="null" && res0.data[0].verified== "verified" )
     {
@@ -131,6 +133,7 @@ useEffect(()=>{
                     title=""
                     name="image"
                     id="upload_img"
+                    required
                     className="select-file cleanbtn"
                     onChange={(e) => {
                       setImg(e.target.files[0]);

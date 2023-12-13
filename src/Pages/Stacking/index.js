@@ -240,11 +240,11 @@ useEffect(()=>{
 
   async function stake()
   {
-    if(props.isVerified!="verified")
-    {
-      alert("Only regitered Members are allowed to stake");
-      return;
-    }
+    // if(props.isVerified!="verified")
+    // {
+    //   alert("Only regitered Members are allowed to stake");
+    //   return;
+    // }
     if(isDisconnected)
     {
       alert("kindly connect your wallet ");
