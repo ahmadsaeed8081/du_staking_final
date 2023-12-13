@@ -78,6 +78,8 @@ if(img){
     else if(res0.data[0].Image!="null" && res0.data[0].verified== "underApproval")
     {
       // set_status(1)
+
+      
       set_status(0)
 
     }
