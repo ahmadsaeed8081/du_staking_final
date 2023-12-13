@@ -65,7 +65,7 @@ if(img){
     const res0 =await axios.get("https://duapi-production.up.railway.app/getdatabyaddress?"+ new URLSearchParams({userAddress: props.regAddress.toLowerCase(),}));
 
     console.log("hello check "+res0.data[0].verified);
-    if(res0.data[0].Image!="null" && res0.data[0].verified=="undefined"  )
+    if(res0.data[0].Image=="null" && res0.data[0].verified=="undefined"  )
     {
       set_status(0)
     }
