@@ -123,27 +123,27 @@ const networkId=56;
     {
       img: "../images/financial.png",
       title: "My Staking",
-      price: (totalInvestment)/10**18,
+      price: (Number(totalInvestment))/(10**18),
     },
     {
       img: "../images/gift.png",
       title: "Staking Reward",
-      price: (totalReward)/10**18,
+      price: (Number(totalReward))/(10**18),
     },
     {
       img: "../images/cash-withdrawal.png",
       title: "Total Withdrawal",
-      price: (Total_withdraw)/10**18,
+      price: (Number(Total_withdraw)/(10**18)),
     },
     {
       img: "../images/award.png",
       title: "Available Balance",
-      price: ((totalEarning-Total_withdraw))/10**18,
+      price: (Number(totalEarning)-Number(Total_withdraw))/(10**18),
     },
     {
       img: "../images/medal.png",
       title: "Direct Reward",
-      price: (totalRefIncome)/10**18,
+      price: (Number(totalRefIncome))/(10**18),
     },
     {
       img: "../images/reward.png",
@@ -162,7 +162,7 @@ const networkId=56;
     {
       img: "../images/wallet.png",
       title: "Total Earning",
-      price: (totalEarning)/10**18,
+      price: (Number(totalEarning))/(10**18),
     },
   ];
 
