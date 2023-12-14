@@ -13,29 +13,40 @@ const Login = ({setuser}) => {
   const navigate = useNavigate();
 
   const [email, set_email] = useState("");
+  // const [allow_login, set_allow_login] = useState(true);
+
   const [password, set_password] = useState("");
+  let allow_login = true;
 
 
 
   async function Handlelogin(event) 
   {
-    event.preventDefault(); // prevent the form from submitting
-    try{
 
-      const userData=await Axios.get("https://duapi-production.up.railway.app/getdatabymail?"+ new URLSearchParams({
-        Email: email,})
+
+    event.preventDefault(); // prevent the form from submitting
+    if(allow_login==false) 
+    {
+      return;
+    }
+
+    allow_login=false;
+    try{
+      
+      const userData=await Axios.get("https://duapi-production.up.railway.app/getdatabymail?"+ new URLSearchParams({Email: email,})
       ).then((response)=>{
-        console.log(response);
         if(response.data.length==0)
         {
           alert("Email is not Registered")
+          allow_login=true;
+
           return;
         }
         else if(response.data[0].Email==email && response.data[0].password==password)
         {
           setuser(response.data[0].userAddress,response.data[0]);
           // setuser("0x7D8d2d6BCDC1e586F94F4ca77a4BC92E3f6CD738",response.data[0]);
-
+          alert("hello")
           dispatch(setUserToken(true));
           navigate("dashboard/home");
 
@@ -45,11 +56,15 @@ const Login = ({setuser}) => {
         {
 
           alert("Email or Password is wrong")
+          allow_login=true;
+
           return;
         }
 
       })
     }catch(e){
+      allow_login=true;
+
       // console.log(e.response.data);
     }
    
