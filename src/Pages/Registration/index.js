@@ -17,6 +17,7 @@ const Registration = () => {
   const location = useLocation();
   const params = new URLSearchParams(location.search);
   const temp_address = params.get("ref");
+  let allow_reg = true;
 
   
 
@@ -32,6 +33,8 @@ const Registration = () => {
   const [confirmpassword, set_confirmpassword] = useState("");
 
   const [passwordShow, setPasswordShow] = useState(false);
+  // const [allow_reg, set_allow_reg] = useState(true);
+
 
   const isValidAddress = (adr) => {
     try {
@@ -46,6 +49,11 @@ const Registration = () => {
   async function handleRegister(event) {
 
     event.preventDefault(); // prevent the form from submitting
+//     alert(ref.toLowerCase())
+// return
+if(allow_reg==false) {return;}
+
+allow_reg=false;
 
     const web3= new Web3(new Web3.providers.HttpProvider("https://endpoints.omniatech.io/v1/bsc/testnet/public	"));
     const contract=new web3.eth.Contract(cont_abi,cont_address);
@@ -59,6 +67,8 @@ const Registration = () => {
       if(response.data.length>0)
         {
           alert("Email is already Registered")
+          allow_reg=true;
+
           return;
         }
     let userData;
@@ -70,26 +80,36 @@ const Registration = () => {
     if(userData.data.length>0)
     {
       alert("Your Wallet Address is already Registered")
+      allow_reg=true;
+
       return;
     }
     if(password.length<8)
     {
       alert("Password length cannot be less than 8 characters")
+      allow_reg=true;
+
       return;
     }
     if(confirmpassword!=password)
     {
       alert("Password doesn't match")
+      allow_reg=true;
+
       return;
     }
-    if(country=="Select Counttry")
+    if(country=="Select Country")
     {
-      alert("Kindly select the country")
+      alert("Kindly select the country ")
+      allow_reg=true;
+
       return;
     }
     if(!isValidAddress(address))
     {
       alert("'Your Wallet Address' doesn't look like an address")
+      allow_reg=true;
+
       return
     }
     if(ref!="" && ref!=null && ref!="0x0000000000000000000000000000000000000000")
@@ -97,6 +117,8 @@ const Registration = () => {
       if(!isValidAddress(ref))
       {
         alert("'Referral Address' doesn't look like an address")
+        allow_reg=true;
+
         return
       }
       let userData1;
@@ -110,6 +132,8 @@ const Registration = () => {
         if(userData1.data[0].verified=="decline" || userData1.data[0].verified=="undefined")
         {
           alert("'Referral Address' is not registered")
+          allow_reg=true;
+
           return
         }
 
@@ -117,6 +141,8 @@ const Registration = () => {
       else
       {
         alert("'Referral Address' is not registered")
+        allow_reg=true;
+
         return
       }  
       
@@ -138,6 +164,8 @@ const Registration = () => {
       })
 
     }catch(e){
+      allow_reg=true;
+
     }
 
   }
@@ -272,7 +300,7 @@ useEffect(()=>{
             <div className="input-field flex flex-col gap-3">
               <h1 className="input-lbl">Country </h1>
               <select id="country" name="country" onChange={(e)=>set_country(e.target.value)} class="form-control" style={{ color:"white",background:"transparent", border:"1px solid #E069E4", borderRadius:8}}>
-              <option value="Select Counttry">Select Counttry</option>
+              <option value="Select Country">Select Counttry</option>
                 <option value="Afghanistan">Afghanistan</option>
                 <option value="Åland Islands">Åland Islands</option>
                 <option value="Albania">Albania</option>
