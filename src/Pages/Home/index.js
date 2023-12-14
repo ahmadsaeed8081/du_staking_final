@@ -97,7 +97,7 @@ const networkId=56;
     }
 
 
-    if(((Number(totalEarning)-Number(Total_withdraw))/10**18) < Number(_amount))
+    if(((Number(totalEarning))/10**18) < Number(_amount))
     {
       alert("You dont have enough balance");
       return;
