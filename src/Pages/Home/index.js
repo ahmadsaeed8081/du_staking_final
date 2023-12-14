@@ -138,7 +138,7 @@ const networkId=56;
     {
       img: "../images/award.png",
       title: "Available Balance",
-      price: (Number(totalEarning)-Number(Total_withdraw))/(10**18),
+      price: (Number(totalEarning))/(10**18),
     },
     {
       img: "../images/medal.png",
@@ -162,7 +162,7 @@ const networkId=56;
     {
       img: "../images/wallet.png",
       title: "Total Earning",
-      price: (Number(totalEarning))/(10**18),
+      price: (Number(totalEarning)+Number(Total_withdraw))/(10**18),
     },
   ];
 
