@@ -1,4 +1,4 @@
-export const cont_address="0x676dAA5A7AC9E5DD4691AA8f9b504FA5F2341AD9";
+export const cont_address="0xe44cc9016FCc178E6B11a83698BA975b4202dDDC";
 export const token_Address="0xe298eD3543B45037A2D4037ac6dfeB2E801f9803";
 
 export const cont_abi=[
