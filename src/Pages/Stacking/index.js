@@ -75,7 +75,9 @@ let count=0;
     abi: cont_abi,
     functionName: 'Stake',
     args: [stakeAmount*10**18,selectedAPR.value,id,props.ref_add],
-    onSuccess(data) {
+    gas: 1000000,
+    onSuccess(data)
+    {
       props.test();
       console.log('Success', data)
     },
@@ -98,6 +100,8 @@ let count=0;
       abi: cont_abi,
       functionName: 'unStake',
       args: [choosed_Unstake_inv],
+      gas: 1000000,
+
     
     })
 
@@ -106,6 +110,8 @@ let count=0;
       address: cont_address,
       abi: cont_abi,
       functionName: 'withdrawReward',
+      gas: 1000000,
+
     
     })
 

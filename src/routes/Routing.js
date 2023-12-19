@@ -125,6 +125,7 @@ useEffect(()=>{
     
     let TotalInvestment = await contract.methods.getTotalInvestment().call({ from: regAddress });  
     let totalEarning; 
+    let referralLevel_earning
     try{
        totalEarning = await contract.methods.get_totalEarning().call({ from: regAddress });   
 
@@ -135,8 +136,13 @@ useEffect(()=>{
     
     let history = await contract.methods.get_history(regAddress).call({ from: regAddress });
     let referralLevel_count = await contract.methods.Level_count(regAddress).call();       
-    let referralLevel_earning = await contract.methods.Level_earning(regAddress).call();       
-    
+    try{
+       referralLevel_earning = await contract.methods.Level_earning(regAddress).call();       
+
+    }
+    catch{
+     
+    }
     let Total_withdraw = await contract.methods.total_withdraw_reaward().call({ from: regAddress });
 
        
