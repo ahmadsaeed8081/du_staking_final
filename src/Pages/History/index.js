@@ -7,7 +7,7 @@ const History = ({history}) => {
   const count = (_deadline) => {
     console.log("here is deadine "+_deadline)
     var now = new Date().getTime();
-    _deadline = Number(_deadline) * 1000;
+    _deadline = (Number(_deadline) * 1000)-now;
     var now = new Date().getDate(_deadline)+"-"+new Date().getMonth(_deadline)+"-"+new Date().getFullYear(_deadline);
 return now
     
