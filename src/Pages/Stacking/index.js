@@ -86,24 +86,24 @@ let count=0;
 
   })
 
-  const { config:appConfig } = usePrepareContractWrite({
+    const { config:appConfig } = usePrepareContractWrite({
+
     address: token_Address,
     abi: token_abi,
-      functionName: 'approve',
-      args: [cont_address,stakeAmount*10**18],
+    functionName: 'approve',
+    args: [cont_address,stakeAmount*10**18],
+
   })
 
 
-
-
     const { config:unstakeConfig } = usePrepareContractWrite({
+
       address: cont_address,
       abi: cont_abi,
       functionName: 'unStake',
       args: [choosed_Unstake_inv],
       maxFeePerGas:300000,
 
-    
     })
 
 
@@ -246,6 +246,8 @@ useEffect(()=>{
 
   async function stake()
   {
+    alert("Staking is stopped in this version.Please use the updated version");
+    return;
     if(props.isVerified=="undefined" || props.isVerified=="decline")
     {
       alert("Only regitered Members are allowed to stake");
